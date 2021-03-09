@@ -31,9 +31,6 @@ public class Patterns {
         StringBuilder dotLine = new StringBuilder();
         for(int i = 0; i < dotLength; i++)
             dotLine.append(".");
-
-        if(!above) patternLines.add(dotLine.toString());
-
         for(int i = 1; i <= base; i++) {
             StringBuilder line = new StringBuilder();
             for (int x = 0; x < i; x++) {
@@ -45,12 +42,13 @@ public class Patterns {
             if(!centered || i % 2 != 0) patternLines.add(line.toString());
         }
 
-        if(above) patternLines.add(dotLine.toString());
         if(flipped) Collections.reverse(patternLines);
 
+        if(above) System.out.println(dotLine.toString());
         for(String line : patternLines) {
             System.out.println(line);
         }
+        if(!above) System.out.println(dotLine.toString());
         System.out.println();
     }
 
