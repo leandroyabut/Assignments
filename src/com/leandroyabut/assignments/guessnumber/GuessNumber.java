@@ -3,6 +3,11 @@ package com.leandroyabut.assignments.guessnumber;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Day 1 Assignment
+ * Guess number game
+ */
+
 public class GuessNumber {
 
     public static void main(String[] args) {
