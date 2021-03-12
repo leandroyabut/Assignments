@@ -1,5 +1,7 @@
 package com.leandroyabut.assignments.listfiles;
 
+import com.leandroyabut.assignments.singleton.SingletonClass;
+
 import java.util.Scanner;
 
 public class ListFiles {
@@ -15,6 +17,7 @@ public class ListFiles {
         fileListHandler.listFiles();
 
         scanner.close();
+
     }
 
 }

@@ -64,6 +64,11 @@ public class FileListHandler {
         }
     }
 
+    /**
+     *
+     * @param tabLength how many tabs to create
+     * @return string with n number of tabs
+     */
     private String tabs(int tabLength) {
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i < tabLength; i++) {
