@@ -1,6 +1,5 @@
 package com.leandroyabut.weekendassignment.functional;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,7 +24,7 @@ public class NoX {
 
             System.out.println(strings.toString() + " -> " + noXList);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

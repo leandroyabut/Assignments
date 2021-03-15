@@ -1,6 +1,5 @@
 package com.leandroyabut.weekendassignment.functional;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,7 +29,7 @@ public class RightmostDigit {
             List<Integer> rightDigits = rmd.getRightMostDigits(listInputReader.getList());
             System.out.print(listInputReader.getList().toString() + " -> " + rightDigits.toString());
 
-        } catch (IOException exception) {
+        } catch (Exception exception) {
 
             exception.printStackTrace();
 

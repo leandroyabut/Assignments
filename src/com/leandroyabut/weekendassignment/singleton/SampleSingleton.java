@@ -13,21 +13,19 @@ public class SampleSingleton {
     public static SampleSingleton getInstance() {
         if(instance == null) {
             synchronized (SampleSingleton.class) {
-                if(instance == null) {
-                    instance = new SampleSingleton();
-                }
+                instance = new SampleSingleton();
             }
         }
         return instance;
     }
 
-    public void databaseQuery(BigDecimal input) {
+    public static void databaseQuery(BigDecimal input) {
         try(Connection conn = DriverManager.getConnection("url of database")) {
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery("select id from table");
             double x = 0;
             while (rs.next()) {
-                x = rs.getInt(1) * input.doubleValue();
+                x = rs.getDouble(1) * input.doubleValue();
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();

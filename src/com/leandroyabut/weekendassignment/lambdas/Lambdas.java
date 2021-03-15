@@ -1,7 +1,5 @@
 package com.leandroyabut.weekendassignment.lambdas;
 
-import java.io.IOException;
-
 public class Lambdas {
 
     public PerformOperation isOdd() {
@@ -49,9 +47,8 @@ public class Lambdas {
                 }
             }
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println("Input not found...");
-            e.printStackTrace();
         }
     }
 

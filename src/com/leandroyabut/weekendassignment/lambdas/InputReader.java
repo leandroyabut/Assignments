@@ -7,10 +7,13 @@ import java.util.Scanner;
 
 public class InputReader implements AutoCloseable{
 
+    private int caseCount;
     private int[][] cases;
+    private String streamPath;
     private InputStream inputStream;
 
     public InputReader(String streamPath) {
+        this.streamPath = streamPath;
         try {
             inputStream = new FileInputStream(streamPath);
         } catch (FileNotFoundException e) {
@@ -20,7 +23,6 @@ public class InputReader implements AutoCloseable{
     }
 
     private void setCases() {
-        int caseCount;
         if(inputStream != null)
             try(Scanner scanner = new Scanner(inputStream)) {
 
@@ -44,6 +46,7 @@ public class InputReader implements AutoCloseable{
                 System.out.println("Cannot access stream...");
             }
         else {
+            caseCount = 0;
             cases = null;
         }
     }
@@ -53,7 +56,7 @@ public class InputReader implements AutoCloseable{
     }
 
     @Override
-    public void close() throws IOException {
+    public void close() throws Exception {
         if(inputStream!=null)inputStream.close();
     }
 }

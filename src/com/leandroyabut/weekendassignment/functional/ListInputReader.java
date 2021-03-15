@@ -2,7 +2,6 @@ package com.leandroyabut.weekendassignment.functional;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -65,7 +64,7 @@ public class ListInputReader<T> implements AutoCloseable {
     }
 
     @Override
-    public void close() throws IOException {
+    public void close() throws Exception {
         if(stream!=null) stream.close();
     }
 }

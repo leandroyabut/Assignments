@@ -26,19 +26,6 @@ public class RightmostDigitTest {
     }
 
     @Test
-    public void rightmostDigitFail() {
-        int[] numbers = new int[]{1, 0, 100, 55, 67, 123, 548, 1324};
-        int[] expectedDigits = new int[]{0, 1, 6, 6, 1, 5, 1, 1};
-
-        for(int i = 0; i < numbers.length; i++) {
-            int number = numbers[i];
-            int expectedDigit = expectedDigits[i];
-            int rightDigit = check(rightmostDigit.rightMostDigit(), number);
-            assertNotEquals(expectedDigit, rightDigit);
-        }
-    }
-
-    @Test
     public void emptyRightMostDigitTest() {
 
         int[] numbers = new int[5];

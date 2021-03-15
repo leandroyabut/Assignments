@@ -18,7 +18,7 @@ public class GroupSumClumpTest {
 
     @Test
     public void groupSumClumpTestFail() {
-        assertFalse(gsc.groupSumClump(0, new int[]{2, 4, 4, 8}, 14));
+        assertFalse(gsc.groupSumClump(0, new int[]{2, 4, 4, 8}, 6));
         assertFalse(gsc.groupSumClump(0, new int[]{3, 6, 6, 8}, 9));
         assertFalse(gsc.groupSumClump(0, new int[]{1, 4, 4, 6}, 5));
     }

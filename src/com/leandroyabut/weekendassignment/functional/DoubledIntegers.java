@@ -31,6 +31,7 @@ public class DoubledIntegers {
             System.out.println(integers.toString() + " -> " + doubled.toString());
 
         } catch (IOException e){
+        } catch (Exception e){
             e.printStackTrace();
         }
     }
